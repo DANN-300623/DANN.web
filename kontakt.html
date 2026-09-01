@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="description" content="Kontaktiraj DANN web za izradu tvog sajta — besplatna konsultacija.">
+<title>Kontakt — DANN web</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web</a>
+    <div class="nav-links">
+      <a href="index.html">Početna</a>
+      <a href="paketi.html">Paketi</a>
+      <a href="cenovnik.html">Cenovnik</a>
+      <a href="proces.html">Proces</a>
+      <a href="primeri.html">Primeri</a>
+      <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page-title">
+  <div class="container">
+    <span class="mono">Kontakt</span>
+    <h1>Popričajmo o tvom sajtu</h1>
+    <p>Pošalji poruku sa osnovnim informacijama o projektu i javljam se u najkraćem roku.</p>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container contact-grid">
+    <div class="contact-info">
+      <span class="mono">Kontakt info</span>
+      <h2>Direktno, bez posrednika</h2>
+      <p>Svaki upit čitam i odgovaram lično — nema automatskih odgovora, nema čekanja u redu.</p>
+
+      <div class="contact-detail">
+        <span class="mono">Email</span>
+        <div>hello@dannweb.rs</div>
+      </div>
+      <div class="contact-detail">
+        <span class="mono">Instagram / Facebook</span>
+        <div>@dann.web</div>
+      </div>
+    </div>
+
+    <div>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="ime">Ime</label>
+          <input type="text" id="ime" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email ili telefon</label>
+          <input type="text" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="tip">Tip projekta</label>
+          <select id="tip" required>
+            <option value="">-- Izaberite --</option>
+            <option value="Paket 1 - Landing">Paket 1 — Landing</option>
+            <option value="Paket 2 - Standard">Paket 2 — Standard</option>
+            <option value="Paket 3 - Premium">Paket 3 — Premium</option>
+            <option value="Nisam siguran/na">Nisam siguran/na</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="poruka">Poruka</label>
+          <textarea id="poruka" placeholder="Nekoliko reči o tvom biznisu i šta ti treba..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Pošalji upit</button>
+      </form>
+      <div class="confirmation" id="confirmationMsg">Hvala na poruci! Javljam se uskoro na naveden kontakt.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+    <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web</div>
+    <div>© 2026 DANN web. Izrada sajtova za mala preduzeća.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
