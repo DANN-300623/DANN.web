@@ -273,7 +273,7 @@
 
   .portfolio-visual {
     aspect-ratio: 16/11;
-    background: #202224;
+    background: #292B2D;
     border: 1px solid var(--line-strong);
     display: flex; align-items: center; justify-content: center;
   }
