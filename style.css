@@ -539,3 +539,12 @@
     .hero-stats { flex-direction: column; }
     .hero-stats > div { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 16px; }
   }
+/* ---------- GRAPHITE SECTION CONTRAST ---------- */
+.services,
+.process,
+.portfolio,
+.addon-section,
+.about,
+.contact {
+  background: #292B2D;
+}
