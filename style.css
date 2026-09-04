@@ -1,5 +1,6 @@
 :root {
   --ink: #343638;
+  --surface: #292B2D;
   --paper: #F2F0EB;
   --line: rgba(242,240,235,0.18);
   --line-strong: rgba(242,240,235,0.34);
@@ -54,13 +55,13 @@
   .brand .dot { color: var(--accent); }
 
   /* ---------- NAV ---------- */
-  nav {
-    position: sticky;
-    top: 0;
-    background: rgba(41,43,45,0.96);
-    border-bottom: 1px solid var(--line);
-    z-index: 100;
-  }
+ nav {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  z-index: 100;
+}
 
   nav .container {
     display: flex;
@@ -271,12 +272,12 @@
     padding: 40px 0;
   }
 
-  .portfolio-visual {
-    aspect-ratio: 16/11;
-    background: #292B2D;
-    border: 1px solid var(--line-strong);
-    display: flex; align-items: center; justify-content: center;
-  }
+.portfolio-visual {
+  aspect-ratio: 16/11;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  display: flex; align-items: center; justify-content: center;
+}
   .portfolio-visual span {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 22px;
@@ -298,11 +299,11 @@
 
   /* ---------- CENOVNIK — LEDGER STIL, ne kartice ---------- */
   .price-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border-top: 1px solid var(--line-strong);
-    border-bottom: 1px solid var(--line-strong);
-  }
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
 
   .price-card {
     padding: 34px 26px 34px 0;
@@ -421,18 +422,15 @@
     letter-spacing: 1px;
   }
 
-  .demo-latice { background: #1E1B19; }
-  .demo-latice span { color: #D9A7A0; }
+.demo-latice,
+.demo-stil,
+.demo-sapica {
+  background: var(--surface);
+}
 
-  .demo-stil { background: #1B1914; }
-  .demo-stil span { color: #C9A66B; }
-
-  .demo-sapica { background: #191D17; }
-  .demo-sapica span { color: #9FC98A; }
-
-  .demo-text .mono { margin-bottom: 14px; display: block; }
-  .demo-text h3 { font-size: 22px; margin-bottom: 10px; }
-  .demo-text p { font-size: 14px; color: var(--text-soft); margin-bottom: 18px; }
+.demo-latice span { color: #D9A7A0; }
+.demo-stil span { color: #C9A66B; }
+.demo-sapica span { color: #9FC98A; }
 
   /* ---------- O NAMA / ABOUT ---------- */
   .about { padding: 90px 0; border-bottom: 1px solid var(--line); }
@@ -546,5 +544,5 @@
 .addon-section,
 .about,
 .contact {
-  background: #292B2D;
+  background: var(--surface);
 }
