@@ -16,7 +16,7 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background: var(--ink);
+    background: #292B2D;
     color: var(--paper);
     line-height: 1.6;
   }
