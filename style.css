@@ -1,9 +1,9 @@
 :root {
-  --ink: #292B2D;
-  --paper: #E8E6E1;
-  --line: rgba(232,230,225,0.14);
-  --line-strong: rgba(232,230,225,0.28);
-  --text-soft: rgba(232,230,225,0.62);
+  --ink: #343638;
+  --paper: #F2F0EB;
+  --line: rgba(242,240,235,0.18);
+  --line-strong: rgba(242,240,235,0.34);
+  --text-soft: rgba(242,240,235,0.68);
   --accent: #C1361E;
 }
 .red-dot {
