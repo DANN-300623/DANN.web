@@ -245,16 +245,30 @@
 
   .process-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 0;
     border-top: 1px solid var(--line);
   }
   .process-step {
+    position: relative;
     padding: 26px 22px 0 0;
     border-right: 1px solid var(--line);
   }
   .process-step:last-child { border-right: none; }
   .process-step:not(:first-child) { padding-left: 22px; }
+  .process-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    top: 24px;
+    right: -13px;
+    color: var(--accent);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    line-height: 1;
+    background: var(--surface);
+    width: 24px;
+    text-align: center;
+  }
   .process-step .mono { color: var(--accent); margin-bottom: 14px; display: block; }
   .process-step h3 { font-size: 16px; margin-bottom: 8px; }
   .process-step p { font-size: 13px; color: var(--text-soft); }
@@ -555,7 +569,11 @@
     .price-card { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 30px; }
     .teaser-row { grid-template-columns: 1fr; }
     .teaser-cell { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
-    .process-grid { grid-template-columns: 1fr 1fr; }
+    .process-grid { grid-template-columns: 1fr; }
+    .process-step { border-right: none !important; padding-left: 0 !important; padding-right: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 24px; margin-bottom: 24px; }
+    .process-step:last-child { border-bottom: none; margin-bottom: 0; }
+    .process-step::after { content: '↓' !important; right: auto !important; left: 50%; top: auto !important; bottom: -21px; transform: translateX(-50%); }
+    .process-step:last-child::after { display: none; }
     .portfolio-card, .demo-card { grid-template-columns: 1fr; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .addon-row { flex-direction: column; gap: 4px; }
