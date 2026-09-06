@@ -305,6 +305,31 @@
   border-bottom: 1px solid var(--line-strong);
 }
 
+  /* Za sekcije sa samo jednim paketom (npr. Mini Booking) —
+     ista vizuelna porodica kao price-grid, ali bez praznih kolona */
+  .price-grid-single {
+    display: grid;
+    grid-template-columns: minmax(0, 420px);
+    border-top: 1px solid var(--line-strong);
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .price-grid-single .price-card { padding-right: 0; }
+
+  /* Istaknuta promo napomena iznad cenovnika */
+  .promo-banner {
+    font-size: 13px;
+    color: var(--text-soft);
+    border: 1px solid var(--line-strong);
+    padding: 14px 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .promo-banner .mono { color: var(--accent); }
+  .promo-banner strong { color: var(--paper); }
+
   .price-card {
     padding: 34px 26px 34px 0;
     border-right: 1px solid var(--line);

@@ -8,7 +8,11 @@
 <title>Kontakt — DANN.web.workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,8 +22,7 @@
     <a href="index.html" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</a>
     <div class="nav-links">
       <a href="index.html">Početna</a>
-      <a href="paketi.html">Paketi</a>
-      <a href="cenovnik.html">Cenovnik</a>
+      <a href="paketi.html">Paketi i cenovnik</a>
       <a href="proces.html">Proces</a>
       <a href="primeri.html">Primeri</a>
       <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
@@ -59,16 +62,22 @@
           <input type="text" id="ime" required>
         </div>
         <div class="form-group">
-          <label for="email">Email ili telefon</label>
-          <input type="text" id="email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="telefon">Telefon <span style="opacity:.6;">(opciono)</span></label>
+          <input type="tel" id="telefon">
         </div>
         <div class="form-group">
           <label for="tip">Tip projekta</label>
           <select id="tip" required>
             <option value="">-- Izaberite --</option>
-            <option value="Paket 1 - Landing">Paket 1 — Landing</option>
-            <option value="Paket 2 - Standard">Paket 2 — Standard</option>
-            <option value="Paket 3 - Premium">Paket 3 — Premium</option>
+            <option value="Start">Start</option>
+            <option value="Comfort">Comfort</option>
+            <option value="Premium">Premium</option>
+            <option value="Exclusive">Exclusive</option>
+            <option value="Mini Booking">Mini Booking</option>
             <option value="Nisam siguran/na">Nisam siguran/na</option>
           </select>
         </div>
