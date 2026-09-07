@@ -32,9 +32,20 @@
       <a href="paketi.html">Paketi i cenovnik</a>
       <a href="primeri.html">Primeri</a>
       <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
+      <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvori meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakaži poziv</a>
+</div>
 
 
 <section class="hero">
@@ -67,19 +78,19 @@
       </a>
     </div>
 
-    <div class="hero-stats">
+    <div class="hero-stats stagger">
 
-      <div>
+      <div class="reveal">
         <div class="stat-num">Od 72h</div>
         <div class="stat-label">Brza izrada jednostavnijih sajtova</div>
       </div>
 
-      <div>
+      <div class="reveal">
         <div class="stat-num">100%</div>
         <div class="stat-label">Responzivan dizajn</div>
       </div>
 
-      <div>
+      <div class="reveal">
         <div class="stat-num">1:1</div>
         <div class="stat-label">Direktna komunikacija, bez posrednika</div>
       </div>
@@ -90,7 +101,7 @@
 </section>
 
 
-<section class="services">
+<section class="services section-surface">
   <div class="container">
 
     <div class="section-head">
@@ -100,9 +111,9 @@
       </p>
     </div>
 
-    <div class="teaser-row">
+    <div class="teaser-row stagger">
 
-      <div class="teaser-cell">
+      <div class="teaser-cell reveal">
         <span class="mono">Paket 1</span>
         <h3>Start</h3>
         <p>
@@ -110,7 +121,7 @@
         </p>
       </div>
 
-      <div class="teaser-cell">
+      <div class="teaser-cell reveal">
         <span class="mono">Paket 2</span>
         <h3>Comfort</h3>
         <p>
@@ -118,7 +129,7 @@
         </p>
       </div>
 
-      <div class="teaser-cell">
+      <div class="teaser-cell reveal">
         <span class="mono">Paket 3</span>
         <h3>Premium</h3>
         <p>
@@ -126,7 +137,7 @@
         </p>
       </div>
 
-      <div class="teaser-cell">
+      <div class="teaser-cell reveal">
         <span class="mono">Paket 4</span>
         <h3>Exclusive</h3>
         <p>
@@ -134,7 +145,7 @@
         </p>
       </div>
 
-      <div class="teaser-cell">
+      <div class="teaser-cell reveal">
         <span class="mono">Posebna opcija</span>
         <h3>Mini Booking</h3>
         <p>
@@ -162,9 +173,9 @@
       </p>
     </div>
 
-    <div class="process-grid">
+    <div class="process-grid stagger">
 
-      <div class="process-step">
+      <div class="process-step reveal">
         <span class="mono">01</span>
         <h3>Razgovor</h3>
         <p>
@@ -172,7 +183,7 @@
         </p>
       </div>
 
-      <div class="process-step">
+      <div class="process-step reveal">
         <span class="mono">02</span>
         <h3>Dizajn</h3>
         <p>
@@ -180,7 +191,7 @@
         </p>
       </div>
 
-      <div class="process-step">
+      <div class="process-step reveal">
         <span class="mono">03</span>
         <h3>Izrada</h3>
         <p>
@@ -188,7 +199,7 @@
         </p>
       </div>
 
-      <div class="process-step">
+      <div class="process-step reveal">
         <span class="mono">04</span>
         <h3>Usaglašavanje</h3>
         <p>
@@ -196,7 +207,7 @@
         </p>
       </div>
 
-      <div class="process-step">
+      <div class="process-step reveal">
         <span class="mono">05</span>
         <h3>Finalizacija</h3>
         <p>
@@ -210,7 +221,7 @@
 </section>
 
 
-<section class="portfolio" id="portfolio">
+<section class="portfolio section-surface" id="portfolio">
   <div class="container">
 
     <div class="section-head">
@@ -218,7 +229,7 @@
       <p>Demo projekti rađeni po istom procesu.</p>
     </div>
 
-    <div class="portfolio-card">
+    <div class="portfolio-card reveal">
 
       <div class="portfolio-visual">
         <span>Latice</span>
@@ -256,7 +267,7 @@
 
 <section class="contact" style="padding: 80px 0; border-bottom: 1px solid var(--line); text-align:center;">
 
-  <div class="container">
+  <div class="container reveal">
 
     <h2 style="font-size:32px; margin-bottom:20px;">
       Spremni da krenemo?

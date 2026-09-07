@@ -44,10 +44,22 @@
         Zakaži poziv
       </a>
 
+      <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
     </div>
 
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvori meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakaži poziv</a>
+</div>
 
 
 <!-- UVOD -->
@@ -75,7 +87,7 @@
 
 <!-- PAKETI -->
 
-<section class="services">
+<section class="services section-surface">
 
   <div class="container">
 
@@ -96,24 +108,24 @@
     </div>
 
 
-    <div class="price-grid">
+    <div class="price-grid stagger">
 
 
       <!-- START -->
 
-      <div class="price-card">
+      <div class="price-card reveal">
 
         <span class="mono">Start</span>
 
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            250€
+            180€
           </span>
 
           <br>
 
-          170€
+          125€
 
         </div>
 
@@ -124,11 +136,10 @@
 
         <ul class="price-features">
 
-          <li>1 stranica, do 5 sekcija</li>
+          <li>1 stranica</li>
           <li>Custom dizajn</li>
           <li>Responsive desktop / tablet / mobile</li>
           <li>Do 5 fotografija</li>
-          <li>Usluge ili proizvodi</li>
           <li>Kontakt informacije</li>
           <li>Dugme za poziv</li>
           <li>Instagram / Facebook</li>
@@ -150,7 +161,7 @@
 
       <!-- COMFORT -->
 
-      <div class="price-card featured">
+      <div class="price-card featured reveal">
 
         <span class="mono">
           Comfort · Najtraženije
@@ -159,12 +170,12 @@
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            550€
+            380€
           </span>
 
           <br>
 
-          380€
+          265€
 
         </div>
 
@@ -175,23 +186,9 @@
 
         <ul class="price-features">
 
+          <li><strong>Sve iz Start, plus:</strong></li>
           <li>Do 5 stranica</li>
-          <li>Custom dizajn</li>
-          <li>Responsive desktop / tablet / mobile</li>
           <li>Do 10 fotografija</li>
-          <li>Početna</li>
-          <li>O nama</li>
-          <li>Usluge / proizvodi</li>
-          <li>Galerija</li>
-          <li>Kontakt</li>
-          <li>Google Maps</li>
-          <li>Dugme za poziv</li>
-          <li>Instagram / Facebook</li>
-          <li>Favicon</li>
-          <li>Osnovni SEO</li>
-          <li>Osnovna priprema za Google pretragu</li>
-          <li>Objavljivanje sajta</li>
-          <li>Pomoć oko domena i hostinga</li>
           <li>2 kruga izmena</li>
 
         </ul>
@@ -205,19 +202,19 @@
 
       <!-- PREMIUM -->
 
-      <div class="price-card">
+      <div class="price-card reveal">
 
         <span class="mono">Premium</span>
 
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            890€
+            600€
           </span>
 
           <br>
 
-          620€
+          420€
 
         </div>
 
@@ -228,27 +225,14 @@
 
         <ul class="price-features">
 
+          <li><strong>Sve iz Comfort, plus:</strong></li>
           <li>Do 8 stranica</li>
-          <li>Custom dizajn</li>
-          <li>Responsive desktop / tablet / mobile</li>
           <li>Do 30 fotografija</li>
-          <li>Napredna struktura sadržaja</li>
-          <li>Galerija</li>
-          <li>Cenovnik</li>
-          <li>Kontakt</li>
-          <li>Google Maps</li>
-          <li>Dugme za poziv</li>
-          <li>Instagram / Facebook</li>
-          <li>Favicon</li>
-          <li>Tehnički SEO</li>
           <li>Sitemap</li>
           <li>Robots.txt</li>
-          <li>Osnovna Search Console priprema</li>
+          <li>Search Console prijava</li>
           <li>Pomoć oko Google Business profila</li>
-          <li>Osnovne integracije</li>
-          <li>Testiranje</li>
-          <li>Objavljivanje sajta</li>
-          <li>Pomoć oko domena i hostinga</li>
+          <li>Testiranje pre lansiranja</li>
           <li>2 kruga izmena</li>
 
         </ul>
@@ -262,19 +246,19 @@
 
       <!-- EXCLUSIVE -->
 
-      <div class="price-card">
+      <div class="price-card reveal">
 
         <span class="mono">Exclusive</span>
 
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            1.450€
+            950€
           </span>
 
           <br>
 
-          990€
+          665€
 
         </div>
 
@@ -285,34 +269,17 @@
 
         <ul class="price-features">
 
+          <li><strong>Sve iz Premium, plus:</strong></li>
           <li>Do 15 stranica</li>
-          <li>Custom vizuelni koncept</li>
-          <li>Naprednija tipografija i layout</li>
-          <li>Custom responsive desktop / mobile</li>
-          <li>Suptilne mikro-interakcije</li>
           <li>Do 50 fotografija</li>
-          <li>Napredna galerija</li>
-          <li>Napredna struktura sadržaja</li>
-          <li>Usluge i kategorije</li>
-          <li>Cenovnik</li>
-          <li>Kontakt</li>
-          <li>Google Maps</li>
-          <li>Instagram / društvene mreže</li>
-          <li>Dugme za poziv</li>
-          <li>Favicon</li>
-          <li>Tehnički SEO</li>
-          <li>Sitemap</li>
-          <li>Robots.txt</li>
-          <li>Canonical</li>
+          <li>Istaknutija tipografija i layout</li>
+          <li>Suptilne mikro-interakcije</li>
+          <li>Canonical oznake</li>
           <li>Open Graph</li>
           <li>Osnovni lokalni SEO</li>
-          <li>Search Console priprema</li>
-          <li>Google Business pomoć</li>
-          <li>Schema gde je odgovarajuća</li>
-          <li>Testiranje desktop / mobile</li>
-          <li>Testiranje formi i funkcionalnosti</li>
-          <li>Objavljivanje sajta</li>
-          <li>Pomoć oko domena i hostinga</li>
+          <li>Schema oznake gde ima smisla</li>
+          <li>Detaljnije testiranje (forme, uređaji)</li>
+          <li><strong>Online zakazivanje ili online poručivanje</strong> (po izboru)</li>
           <li>3 kruga izmena</li>
 
         </ul>
@@ -368,7 +335,7 @@
 
     <div class="price-grid-single">
 
-      <div class="price-card featured">
+      <div class="price-card featured reveal">
 
         <span class="mono">
           Mini Booking
@@ -377,12 +344,12 @@
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            420€
+            320€
           </span>
 
           <br>
 
-          290€
+          225€
 
         </div>
 
@@ -395,9 +362,6 @@
           <li>Do 3 stranice</li>
           <li>Custom responsive dizajn</li>
           <li>Do 15 fotografija</li>
-          <li>Usluge</li>
-          <li>Kontakt</li>
-          <li>Galerija</li>
           <li>Google Maps</li>
           <li>Instagram / društvene mreže</li>
           <li>Dugme za poziv</li>
@@ -428,7 +392,7 @@
 
 <!-- DODATNE USLUGE -->
 
-<section class="addon-section">
+<section class="addon-section section-surface">
 
   <div class="container">
 
@@ -444,12 +408,13 @@
     </div>
 
 
-    <div class="addon-table">
+    <div class="addon-table reveal">
 
 
       <div class="addon-row">
         <div>
           <span class="naziv">Dodatna stranica</span>
+          <span class="opis">Dodatna stranica van paketa</span>
         </div>
         <span class="cena">20€</span>
       </div>
@@ -458,6 +423,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Dodatna sekcija</span>
+          <span class="opis">Dodatni blok na postojećoj stranici</span>
         </div>
         <span class="cena">10€</span>
       </div>
@@ -466,6 +432,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Dodatna fotografija</span>
+          <span class="opis">Dodatna fotografija van paketa</span>
         </div>
         <span class="cena">2€ / kom.</span>
       </div>
@@ -473,7 +440,8 @@
 
       <div class="addon-row">
         <div>
-          <span class="naziv">Kontakt forma / slanje upita</span>
+          <span class="naziv">Kontakt forma</span>
+          <span class="opis">Posetilac šalje poruku sa sajta</span>
         </div>
         <span class="cena">40€</span>
       </div>
@@ -481,15 +449,26 @@
 
       <div class="addon-row">
         <div>
-          <span class="naziv">Online booking</span>
+          <span class="naziv">Online zakazivanje</span>
+          <span class="opis">Van Mini Booking / Exclusive paketa · zavisi od složenosti sistema</span>
         </div>
-        <span class="cena">od 120€</span>
+        <span class="cena">od 100€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Online poručivanje</span>
+          <span class="opis">Klijent bira proizvode i količinu, porudžbina stiže tebi · zavisi od složenosti sistema</span>
+        </div>
+        <span class="cena">od 100€</span>
       </div>
 
 
       <div class="addon-row">
         <div>
           <span class="naziv">WhatsApp / Viber dugme</span>
+          <span class="opis">Dugme koje na telefonu vodi direktno na Viber/WhatsApp razgovor</span>
         </div>
         <span class="cena">5€</span>
       </div>
@@ -498,6 +477,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Višejezičnost</span>
+          <span class="opis">Dugme za promenu jezika, sadržaj preveden</span>
         </div>
         <span class="cena">50€ / dodatni jezik</span>
       </div>
@@ -506,14 +486,16 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Blog sekcija</span>
+          <span class="opis">Klijent sam dodaje članke</span>
         </div>
-        <span class="cena">30€</span>
+        <span class="cena">90€</span>
       </div>
 
 
       <div class="addon-row">
         <div>
           <span class="naziv">Naprednije animacije</span>
+          <span class="opis">Parallax, sekvencijalni efekti, animirani brojevi</span>
         </div>
         <span class="cena">25€</span>
       </div>
@@ -522,6 +504,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Jednostavan logo</span>
+          <span class="opis">Osnovni tekstualni / ikonski logo</span>
         </div>
         <span class="cena">30€</span>
       </div>
@@ -529,7 +512,8 @@
 
       <div class="addon-row">
         <div>
-          <span class="naziv">Podešavanje Google Analytics-a</span>
+          <span class="naziv">Google Analytics</span>
+          <span class="opis">Praćenje broja poseta</span>
         </div>
         <span class="cena">10€</span>
       </div>
@@ -537,7 +521,8 @@
 
       <div class="addon-row">
         <div>
-          <span class="naziv">Podešavanje Google Search Console-a</span>
+          <span class="naziv">Google Search Console</span>
+          <span class="opis">Praćenje kako se sajt pojavljuje u Google pretrazi</span>
         </div>
         <span class="cena">10€</span>
       </div>
@@ -546,6 +531,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Analytics + Search Console</span>
+          <span class="opis">Oba zajedno</span>
         </div>
         <span class="cena">15€</span>
       </div>
@@ -554,6 +540,7 @@
       <div class="addon-row">
         <div>
           <span class="naziv">Dodatni krug izmena</span>
+          <span class="opis">Dodatno usaglašavanje i izmene na gotovom sajtu</span>
         </div>
         <span class="cena">15€</span>
       </div>
@@ -564,10 +551,11 @@
 
     <p style="font-size:13px; color:var(--ink-soft); margin-top:24px; text-align:center;">
 
-      Cena online booking sistema zavisi od složenosti.
-      Jednostavne integracije počinju od 120€, dok se
-      napredniji sistemi sa više zaposlenih, različitim
-      rasporedima i složenijom logikom dogovaraju posebno.
+      Cena za online zakazivanje i online poručivanje počinje od 100€ i
+      zavisi od pristupa — jednostavnija rešenja (Apps Script + tabela,
+      kao kod Mini Booking-a) su jeftinija, dok sistemi sa pravom bazom
+      podataka, više zaposlenih ili složenijom logikom koštaju više i
+      dogovaraju se posebno.
 
     </p>
 
@@ -594,10 +582,10 @@
     </div>
 
 
-    <div class="price-grid">
+    <div class="price-grid stagger">
 
 
-      <div class="price-card">
+      <div class="price-card reveal">
 
         <span class="mono">Basic</span>
 
@@ -621,7 +609,7 @@
       </div>
 
 
-      <div class="price-card featured">
+      <div class="price-card featured reveal">
 
         <span class="mono">Standard</span>
 
@@ -646,7 +634,7 @@
       </div>
 
 
-      <div class="price-card">
+      <div class="price-card reveal">
 
         <span class="mono">Premium</span>
 
@@ -689,7 +677,7 @@
 
 <!-- NAPOMENA -->
 
-<section class="about" style="border-bottom:none;">
+<section class="about section-surface" style="border-bottom:none;">
 
   <div class="container about-grid">
 
@@ -697,7 +685,7 @@
       <span class="mono">Važno</span>
     </div>
 
-    <div class="about-text">
+    <div class="about-text reveal">
 
       <h2>
         Nisi sigurna koji paket ti treba?

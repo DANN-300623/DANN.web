@@ -25,9 +25,20 @@
       <a href="paketi.html">Paketi i cenovnik</a>
       <a href="primeri.html" class="active">Primeri</a>
       <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
+      <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvori meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakaži poziv</a>
+</div>
 
 <section class="page-title">
   <div class="container">
@@ -37,10 +48,10 @@
   </div>
 </section>
 
-<section class="demo-grid">
-  <div class="container">
+<section class="demo-grid section-surface">
+  <div class="container stagger">
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-latice"><span>Latice</span></div>
       <div class="demo-text">
         <span class="mono">Kozmetički salon · Pastelno, nežno</span>
@@ -55,7 +66,7 @@
       </div>
     </div>
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-stil"><span>Stil</span></div>
       <div class="demo-text">
         <span class="mono">Kozmetički salon · Elegantno, zlatno</span>
@@ -70,7 +81,7 @@
       </div>
     </div>
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-sapica"><span>Šapica</span></div>
       <div class="demo-text">
         <span class="mono">Pet shop · Igrivo, veselo</span>
@@ -89,7 +100,7 @@
 </section>
 
 <section class="contact" style="padding: 0 0 100px; text-align:center;">
-  <div class="container">
+  <div class="container reveal">
     <h2 style="font-size:28px; margin-bottom:24px;">Vidiš nešto što ti se sviđa?</h2>
     <a href="kontakt.html" class="btn-primary">Popričajmo o tvom projektu</a>
   </div>

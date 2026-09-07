@@ -1,11 +1,13 @@
 :root {
+  --void: #17181A;
   --ink: #343638;
-  --surface: #292B2D;
+  --surface: #232427;
   --paper: #F2F0EB;
   --line: rgba(242,240,235,0.18);
   --line-strong: rgba(242,240,235,0.34);
   --text-soft: rgba(242,240,235,0.68);
   --accent: #C1361E;
+  --ease: cubic-bezier(.22,.61,.36,1);
 }
 .red-dot {
   color: #e63946;
@@ -17,7 +19,7 @@
 
   body {
     font-family: 'Inter', sans-serif;
-    background: #343638;
+    background: var(--ink);
     color: var(--paper);
     line-height: 1.6;
   }
@@ -58,7 +60,7 @@
  nav {
   position: sticky;
   top: 0;
-  background: var(--surface);
+  background: var(--void);
   border-bottom: 1px solid var(--line);
   z-index: 100;
 }
@@ -77,6 +79,17 @@
     font-size: 13px;
     letter-spacing: 0.3px;
   }
+
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .burger span { height: 1px; background: var(--paper); width: 100%; }
 
   .nav-links a {
     position: relative;
@@ -288,7 +301,7 @@
 
 .portfolio-visual {
   aspect-ratio: 16/11;
-  background: var(--surface);
+  background: var(--void);
   border: 1px solid var(--line-strong);
   display: flex; align-items: center; justify-content: center;
 }
@@ -400,7 +413,8 @@
     gap: 16px;
   }
 
-  .addon-row .naziv { font-size: 14px; }
+  .addon-row .naziv { font-size: 14px; display: block; }
+  .addon-row .opis { font-size: 12.5px; color: var(--text-soft); display: block; margin-top: 3px; }
   .addon-row .cena {
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 500;
@@ -557,6 +571,7 @@
   /* ---------- FOOTER ---------- */
   footer {
     padding: 36px 0;
+    background: var(--void);
     border-top: 1px solid var(--line);
     font-size: 12px;
     color: var(--text-soft);
@@ -565,6 +580,7 @@
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px) {
     .nav-links a:not(.btn-nav) { display: none; }
+    .burger { display: flex; }
     .price-grid { grid-template-columns: 1fr; }
     .price-card { border-right: none !important; padding-left: 0 !important; border-bottom: 1px solid var(--line); padding-bottom: 30px; }
     .teaser-row { grid-template-columns: 1fr; }
@@ -580,12 +596,88 @@
     .hero-stats { flex-direction: column; }
     .hero-stats > div { border-right: none; border-bottom: 1px solid var(--line); padding-bottom: 16px; margin-bottom: 16px; }
   }
-/* ---------- GRAPHITE SECTION CONTRAST ---------- */
-.services,
-.process,
-.portfolio,
-.addon-section,
-.about,
-.contact {
-  background: var(--surface);
+/* ---------- SVESNA SMENA TONOVA (ne automatska po klasi) ----------
+   Podrazumevana pozadina stranice je --ink (srednji graphite).
+   .section-surface svesno zatamnjuje pojedinu sekciju na --surface,
+   da bi se sekcije jasno smenjivale — dodaje se ručno u HTML-u,
+   naizmenično, ne svakoj sekciji određene klase. */
+.section-surface { background: var(--surface); }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity .7s var(--ease), transform .7s var(--ease);
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* Sekvencijalno pojavljivanje dece unutar iste grupe —
+   dodati klasu "stagger" na roditelja (grid/red), reveal na svako dete */
+.stagger > *:nth-child(1) { transition-delay: 0s; }
+.stagger > *:nth-child(2) { transition-delay: .08s; }
+.stagger > *:nth-child(3) { transition-delay: .16s; }
+.stagger > *:nth-child(4) { transition-delay: .24s; }
+.stagger > *:nth-child(5) { transition-delay: .32s; }
+.stagger > *:nth-child(6) { transition-delay: .40s; }
+.stagger > *:nth-child(7) { transition-delay: .48s; }
+
+/* Suptilan hover na logotip — mala, elegantna mikro-interakcija */
+.brand .dot {
+  display: inline-block;
+  transition: transform .3s var(--ease);
+}
+.brand:hover .dot { transform: scale(1.4); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .brand .dot { transition: none; }
+  .hero .container { transform: none !important; }
+}
+/* ---------- MOBILE MENU OVERLAY ---------- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: var(--void);
+  z-index: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px;
+  transform: translateY(-100%);
+  transition: transform .5s var(--ease);
+}
+.mobile-menu.open { transform: translateY(0); }
+
+.mobile-menu__close {
+  position: absolute;
+  top: 26px;
+  right: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: var(--text-soft);
+}
+
+.mobile-menu a.mnav-link {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(30px, 9vw, 44px);
+  color: var(--paper);
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-menu__book {
+  margin-top: 24px;
+  display: inline-block;
+  width: fit-content;
+  border: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  padding: 13px 24px;
+  font-size: 13px;
+  letter-spacing: 0.5px;
 }

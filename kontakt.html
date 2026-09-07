@@ -25,9 +25,20 @@
       <a href="paketi.html">Paketi i cenovnik</a>
       <a href="primeri.html">Primeri</a>
       <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
+      <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvori meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakaži poziv</a>
+</div>
 
 <section class="page-title">
   <div class="container">
@@ -37,9 +48,9 @@
   </div>
 </section>
 
-<section class="contact">
-  <div class="container contact-grid">
-    <div class="contact-info">
+<section class="contact section-surface">
+  <div class="container contact-grid stagger">
+    <div class="contact-info reveal">
       <span class="mono">Kontakt info</span>
       <h2>Direktno, bez posrednika</h2>
       <p>Svaki upit čitam i odgovaram lično — nema automatskih odgovora, nema čekanja u redu.</p>
@@ -54,7 +65,7 @@
       </div>
     </div>
 
-    <div>
+    <div class="reveal">
       <form id="contactForm">
         <div class="form-group">
           <label for="ime">Ime</label>
