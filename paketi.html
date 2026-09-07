@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
 
 <meta name="description" content="Paketi i cenovnik izrade sajtova — Start, Comfort, Premium, Exclusive i Mini Booking. Jasne cene, dodatne usluge i održavanje.">
 
-<title>Paketi i cenovnik — DANN.web.workshop</title>
+<link rel="canonical" href="https://dann-web.dann-standard.workers.dev/paketi.html">
+<meta property="og:title" content="Paketi i cenovnik izrade sajtova | DANN.web.workshop">
+<meta property="og:description" content="Jasni paketi i transparentne cene za izradu sajta — od jednostavnog predstavljanja do sajta sa online zakazivanjem.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dann-web.dann-standard.workers.dev/paketi.html">
+
+<title>Paketi i cenovnik izrade sajtova | DANN.web.workshop</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,10 +48,10 @@
       <a href="primeri.html">Primeri</a>
 
       <a href="kontakt.html" class="btn-nav">
-        Zakaži poziv
+        Zakažite poziv
       </a>
 
-      <button class="burger" id="burgerBtn" aria-label="Otvori meni" aria-expanded="false">
+      <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
 
@@ -54,11 +61,11 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvori meni">ZATVORI ✕</button>
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni">ZATVORI ✕</button>
   <a href="index.html" class="mnav-link">Početna</a>
   <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
   <a href="primeri.html" class="mnav-link">Primeri</a>
-  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakaži poziv</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakažite poziv</a>
 </div>
 
 
@@ -71,7 +78,7 @@
     <span class="mono">Paketi i cenovnik</span>
 
     <h1>
-      Izaberi ono što tvom biznisu zaista treba.
+      Izaberite ono što Vašem biznisu zaista treba.
     </h1>
 
     <p>
@@ -113,7 +120,7 @@
 
       <!-- START -->
 
-      <div class="price-card reveal">
+      <div class="price-card reveal" id="start">
 
         <span class="mono">Start</span>
 
@@ -146,7 +153,7 @@
           <li>Google Maps</li>
           <li>Favicon</li>
           <li>Osnovni tehnički SEO</li>
-          <li>Objavljivanje sajta</li>
+          <li>Pomoć pri objavljivanju sajta</li>
           <li>Pomoć oko domena i hostinga</li>
           <li>1 krug izmena</li>
 
@@ -161,7 +168,7 @@
 
       <!-- COMFORT -->
 
-      <div class="price-card featured reveal">
+      <div class="price-card featured reveal" id="comfort">
 
         <span class="mono">
           Comfort · Najtraženije
@@ -202,7 +209,7 @@
 
       <!-- PREMIUM -->
 
-      <div class="price-card reveal">
+      <div class="price-card reveal" id="premium">
 
         <span class="mono">Premium</span>
 
@@ -246,7 +253,7 @@
 
       <!-- EXCLUSIVE -->
 
-      <div class="price-card reveal">
+      <div class="price-card reveal" id="exclusive">
 
         <span class="mono">Exclusive</span>
 
@@ -335,7 +342,7 @@
 
     <div class="price-grid-single">
 
-      <div class="price-card featured reveal">
+      <div class="price-card featured reveal" id="mini-booking">
 
         <span class="mono">
           Mini Booking
@@ -706,8 +713,82 @@
       </p>
 
       <a href="kontakt.html" class="btn-primary">
-        Zakaži besplatnu konsultaciju
+        Zakažite besplatnu konsultaciju
       </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+  <div class="container">
+
+    <div class="section-head">
+      <h2>Česta pitanja</h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <details class="faq-item">
+        <summary>Koliko traje izrada sajta?</summary>
+        <p>Zavisi od paketa — od 3 do 20 radnih dana, u zavisnosti od broja stranica i funkcionalnosti. Tačan rok se dogovara pre početka rada.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Šta je potrebno da pripremim?</summary>
+        <p>Tekstove i informacije o uslugama, fotografije ako ih imate, kontakt podatke i linkove ka društvenim mrežama. Ako nešto od ovoga nemate, možemo zajedno da definišemo šta je potrebno.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li obezbeđujete domen i hosting?</summary>
+        <p>Ne — domen i hosting se kupuju posebno, na Vaše ime. Na zahtev pomažem sa uputstvima za podešavanje.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li je sajt prilagođen telefonu?</summary>
+        <p>Da, svaki sajt je responsive — radi na telefonu, tabletu i računaru.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li je SEO uključen?</summary>
+        <p>Osnovni tehnički SEO je uključen u sve pakete. Napredniji SEO elementi (sitemap, Search Console, lokalni SEO) uključeni su od paketa Premium naviše.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li mogu kasnije da menjam sadržaj?</summary>
+        <p>Da — kroz mesečno održavanje, ili po dogovoru za pojedinačne izmene.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li nudite održavanje?</summary>
+        <p>Da, tri paketa održavanja su dostupna posle lansiranja sajta — pogledajte cenovnik održavanja iznad.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li mogu dobiti online zakazivanje?</summary>
+        <p>Da — uključeno u Mini Booking i Exclusive paket, a dostupno je i kao dodatak drugim paketima.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Šta ako nemam fotografije?</summary>
+        <p>Radimo sa fotografijama koje dostavite. Ako ih nemate, razgovaramo o rešenju koje ima smisla za Vaš sajt.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Šta ako nemam logo?</summary>
+        <p>Sajt može da se napravi i bez logotipa, samo sa nazivom biznisa. Jednostavan logo je dostupan kao dodatna usluga.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Da li mogu kasnije proširiti sajt?</summary>
+        <p>Da — dodatne stranice, fotografije i funkcionalnosti mogu se dodati naknadno, po cenovniku dodatnih usluga.</p>
+      </details>
 
     </div>
 

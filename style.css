@@ -243,6 +243,36 @@
   .teaser-cell h3 { font-size: 19px; margin: 12px 0 8px; }
   .teaser-cell p { font-size: 13px; color: var(--text-soft); }
 
+  .teaser-price {
+    margin: 14px 0 10px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .teaser-price .old {
+    text-decoration: line-through;
+    opacity: .5;
+    font-size: 13px;
+    margin-right: 8px;
+  }
+  .teaser-price .new { font-size: 20px; font-weight: 500; }
+  .teaser-price .new::before { content: 'od '; font-size: 12px; font-weight: 400; color: var(--text-soft); }
+
+  .teaser-features {
+    font-size: 12px;
+    color: var(--text-soft);
+    margin-bottom: 16px;
+    line-height: 1.6;
+  }
+
+  .teaser-cta {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+  .teaser-cta:hover { opacity: .8; }
+
   .link-arrow {
     display: inline-block;
     font-size: 12px;
@@ -278,7 +308,7 @@
     font-family: 'Space Grotesk', sans-serif;
     font-size: 15px;
     line-height: 1;
-    background: var(--surface);
+    background: var(--ink);
     width: 24px;
     text-align: center;
   }
@@ -323,6 +353,10 @@
     border: 1px solid var(--line-strong);
     color: var(--text-soft);
   }
+
+  /* ---------- ZA KOGA RADIMO (Početna) ---------- */
+  .services-audience { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
 
   /* ---------- CENOVNIK — LEDGER STIL, ne kartice ---------- */
   .price-grid {
@@ -497,6 +531,44 @@
   }
   .about h2 { font-size: 28px; margin-bottom: 18px; }
   .about-text p { font-size: 15px; color: var(--text-soft); margin-bottom: 16px; max-width: 560px; }
+
+  /* ---------- FAQ ---------- */
+  .faq { padding: 90px 0; border-bottom: 1px solid var(--line); }
+
+  .faq-list { border-top: 1px solid var(--line-strong); }
+
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0;
+  }
+
+  .faq-item summary {
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    font-size: 22px;
+    line-height: 1;
+    color: var(--accent);
+    flex-shrink: 0;
+    transition: transform .3s var(--ease);
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+
+  .faq-item p {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--text-soft);
+    max-width: 640px;
+  }
 
   /* ---------- KONTAKT ---------- */
   .contact { padding: 90px 0; }
