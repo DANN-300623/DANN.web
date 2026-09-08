@@ -4,11 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<meta name="description" content="Demo projekti — pregled stila i pristupa izradi sajtova za male biznise.">
-<title>Primeri rada — DANN web</title>
+<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
+<meta name="description" content="Primeri i koncept projekti — pregled stila i pristupa izradi sajtova za male biznise.">
+<link rel="canonical" href="https://dann-web.dann-standard.workers.dev/primeri.html">
+<meta property="og:title" content="Primeri web sajtova | DANN.web.workshop">
+<meta property="og:description" content="Koncept projekti koji pokazuju stil i pristup izradi sajtova za male biznise i uslužne delatnosti.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dann-web.dann-standard.workers.dev/primeri.html">
+<title>Primeri web sajtova | DANN.web.workshop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,14 +28,23 @@
     <a href="index.html" class="brand" style="text-decoration:none;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</a>
     <div class="nav-links">
       <a href="index.html">Početna</a>
-      <a href="paketi.html">Paketi</a>
-      <a href="cenovnik.html">Cenovnik</a>
-      <a href="proces.html">Proces</a>
+      <a href="paketi.html">Paketi i cenovnik</a>
       <a href="primeri.html" class="active">Primeri</a>
-      <a href="kontakt.html" class="btn-nav">Zakaži poziv</a>
+      <a href="kontakt.html" class="btn-nav">Zakažite poziv</a>
+      <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakažite poziv</a>
+</div>
 
 <section class="page-title">
   <div class="container">
@@ -35,10 +54,10 @@
   </div>
 </section>
 
-<section class="demo-grid">
-  <div class="container">
+<section class="demo-grid section-surface">
+  <div class="container stagger">
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-latice"><span>Latice</span></div>
       <div class="demo-text">
         <span class="mono">Kozmetički salon · Pastelno, nežno</span>
@@ -53,7 +72,7 @@
       </div>
     </div>
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-stil"><span>Stil</span></div>
       <div class="demo-text">
         <span class="mono">Kozmetički salon · Elegantno, zlatno</span>
@@ -68,7 +87,7 @@
       </div>
     </div>
 
-    <div class="demo-card">
+    <div class="demo-card reveal">
       <div class="demo-visual demo-sapica"><span>Šapica</span></div>
       <div class="demo-text">
         <span class="mono">Pet shop · Igrivo, veselo</span>
@@ -87,16 +106,16 @@
 </section>
 
 <section class="contact" style="padding: 0 0 100px; text-align:center;">
-  <div class="container">
-    <h2 style="font-size:28px; margin-bottom:24px;">Vidiš nešto što ti se sviđa?</h2>
-    <a href="kontakt.html" class="btn-primary">Popričajmo o tvom projektu</a>
+  <div class="container reveal">
+    <h2 style="font-size:28px; margin-bottom:24px;">Vidite nešto što Vam se sviđa?</h2>
+    <a href="kontakt.html" class="btn-primary">Popričajmo o Vašem projektu</a>
   </div>
 </section>
 
 <footer>
   <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
     <div class="brand" style="font-size:16px;">DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop</div>
-    <div>© 2026 DANN web. Izrada sajtova za mala preduzeća.</div>
+    <div>© 2026 DANN.web.workshop. Izrada sajtova za mala preduzeća.</div>
   </div>
 </footer>
 
