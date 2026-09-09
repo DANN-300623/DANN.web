@@ -21,6 +21,19 @@
     });
   }
 
+  /* ---------- LOGO — vraca na vrh ako smo vec na pocetnoj ---------- */
+  const brandLink = document.querySelector('.brand');
+  if (brandLink) {
+    brandLink.addEventListener('click', function(e){
+      const path = window.location.pathname;
+      const naPocetnoj = path.endsWith('/') || path.endsWith('index.html');
+      if (naPocetnoj) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  }
+
   /* ---------- SCROLL REVEAL + SEKVENCIJALNO POJAVLJIVANJE ---------- */
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
