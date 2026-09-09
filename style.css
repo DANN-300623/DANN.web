@@ -469,11 +469,19 @@
     color: var(--accent);
     text-align: right;
   }
-  .addon-row .cena-promo {
+  .addon-row .cena-old {
     display: block;
-    font-size: 10.5px;
+    font-size: 11px;
     font-weight: 400;
-    opacity: .6;
+    text-decoration: line-through;
+    opacity: .5;
+    color: var(--text-soft);
+  }
+  .addon-row .cena-new {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
     margin-top: 2px;
   }
 
