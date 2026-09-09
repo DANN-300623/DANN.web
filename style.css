@@ -469,6 +469,13 @@
     color: var(--accent);
     text-align: right;
   }
+  .addon-row .cena-promo {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 400;
+    opacity: .6;
+    margin-top: 2px;
+  }
 
   /* ---------- PROCES stranica — indeks, ne kartice ---------- */
   .timeline { padding: 100px 0; }
