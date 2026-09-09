@@ -755,26 +755,37 @@
   display: block;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
+  transition: border-color .2s ease, color .2s ease;
 }
-.mobile-menu a.mnav-link:active { opacity: 0.6; }
+.mobile-menu a.mnav-link:active {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
 .mobile-menu a.mnav-link:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
 .mobile-menu__book {
-  margin-top: 24px;
-  display: inline-block;
-  width: fit-content;
-  background: var(--accent) !important;
+  margin-top: 28px;
+  align-self: flex-start;
+  display: inline-flex;
+  width: auto;
+  background: none !important;
   border: 1px solid var(--accent) !important;
-  color: var(--void) !important;
-  padding: 13px 24px;
+  color: var(--accent) !important;
+  border-radius: 24px;
+  padding: 12px 26px;
   font-size: 13px;
   letter-spacing: 0.5px;
   font-weight: 600;
+  transition: background .2s ease, color .2s ease;
 }
-.mobile-menu__book:active { opacity: 0.8; }
+.mobile-menu__book:active {
+  background: var(--accent) !important;
+  color: var(--void) !important;
+  opacity: 1;
+}
 
 /* ---------- SKRIVEN DETALJ + POPUP (samo paketi.html) ---------- */
 .hidden-detail {
