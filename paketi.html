@@ -29,6 +29,21 @@
 
 <body>
 
+<button class="hidden-detail" id="hiddenDetail" aria-label="Detalj">DΛNN.</button>
+
+<div class="detail-modal" id="detailModal">
+  <div class="detail-modal__box">
+    <span class="mono">OTKRIVENO</span>
+    <h3>Uočili ste detalj.</h3>
+    <p>Mala nagrada za pažnju — 5% dodatnog popusta, pored trenutne promo cene.</p>
+    <div class="detail-modal__actions">
+      <a href="kontakt.html?kod=DANN5" class="btn-primary">Iskoristite popust</a>
+      <button class="detail-modal__close" id="closeDetailModal">Zatvorite</button>
+    </div>
+  </div>
+</div>
+
+
 
 <nav>
   <div class="container">
@@ -132,7 +147,7 @@
 
           <br>
 
-          125€
+          126€
 
         </div>
 
@@ -261,12 +276,12 @@
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            1.150€
+            1.200€
           </span>
 
           <br>
 
-          805€
+          840€
 
         </div>
 
@@ -287,7 +302,7 @@
           <li>Osnovni lokalni SEO</li>
           <li>Schema oznake gde ima smisla</li>
           <li>Admin panel za samostalno uređivanje</li>
-          <li><strong>Online zakazivanje ili online poručivanje</strong> (po izboru)</li>
+          <li><strong>Online zakazivanje ili online poručivanje</strong> (po izboru, do 2 zaposlena, do 10 usluga)</li>
           <li>3 kruga izmena</li>
 
         </ul>
@@ -352,12 +367,12 @@
         <div class="price-amount">
 
           <span style="text-decoration:line-through; opacity:.5; font-size:18px;">
-            320€
+            420€
           </span>
 
           <br>
 
-          225€
+          294€
 
         </div>
 
@@ -376,7 +391,7 @@
           <li>Favicon</li>
           <li>Osnovni SEO</li>
 
-          <li><strong>Online zakazivanje</strong></li>
+          <li><strong>Online zakazivanje</strong> (do 2 zaposlena, do 10 usluga)</li>
           <li>Apps Script integracija</li>
           <li>Izbor usluge</li>
           <li>Izbor datuma</li>
@@ -384,6 +399,7 @@
           <li>Ime i telefon klijenta</li>
           <li>Čuvanje rezervacije</li>
           <li>Zaštita od zauzetog termina</li>
+          <li>Admin panel za radno vreme i radne dane</li>
 
           <li>1 krug izmena</li>
 
@@ -475,7 +491,7 @@
           <span class="opis">Zavisi od sistema</span>
         </div>
         <span class="ukljuceno">Exclusive, Mini Booking</span>
-        <span class="cena">od 110€</span>
+        <span class="cena">od 200€</span>
       </div>
 
 
@@ -485,7 +501,7 @@
           <span class="opis">Zavisi od sistema</span>
         </div>
         <span class="ukljuceno">Exclusive</span>
-        <span class="cena">od 110€</span>
+        <span class="cena">od 200€</span>
       </div>
 
 
@@ -601,10 +617,30 @@
 
       <div class="addon-row">
         <div>
-          <span class="naziv">Admin panel</span>
-          <span class="opis">Cene, usluge, radno vreme</span>
+          <span class="naziv">Dodatni zaposleni</span>
+          <span class="opis">Preko 2, po osobi</span>
         </div>
-        <span class="ukljuceno">Exclusive</span>
+        <span class="ukljuceno">Exclusive, Mini Booking</span>
+        <span class="cena">od 50€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Dodatna usluga</span>
+          <span class="opis">Preko 10, po usluzi</span>
+        </div>
+        <span class="ukljuceno">Exclusive, Mini Booking</span>
+        <span class="cena">od 5€</span>
+      </div>
+
+
+      <div class="addon-row">
+        <div>
+          <span class="naziv">Admin panel</span>
+          <span class="opis">Cene, usluge, kontakt</span>
+        </div>
+        <span class="ukljuceno">Exclusive (uključeno) — dostupno svima kao dodatak</span>
         <span class="cena">od 200€</span>
       </div>
 
@@ -634,7 +670,7 @@
 
     <p style="font-size:13px; color:var(--ink-soft); margin-top:24px; text-align:center;">
 
-      Cena za online zakazivanje i online poručivanje počinje od 110€ i
+      Cena za online zakazivanje i online poručivanje počinje od 200€ i
       zavisi od pristupa — jednostavnija rešenja (Apps Script + tabela,
       kao kod Mini Booking-a) su jeftinija, dok sistemi sa pravom bazom
       podataka, više zaposlenih ili složenijom logikom koštaju više i

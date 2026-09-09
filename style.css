@@ -775,3 +775,96 @@
   font-weight: 600;
 }
 .mobile-menu__book:active { opacity: 0.8; }
+
+/* ---------- SKRIVEN DETALJ + POPUP (samo paketi.html) ---------- */
+.hidden-detail {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  color: var(--line-strong);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px 4px;
+  z-index: 300;
+  opacity: 0.5;
+  transition: opacity .4s var(--ease), color .4s var(--ease);
+}
+.hidden-detail:hover,
+.hidden-detail:focus-visible {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.detail-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(23, 24, 26, 0.92);
+  z-index: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s var(--ease);
+}
+.detail-modal.open { opacity: 1; pointer-events: auto; }
+
+.detail-modal__box {
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  padding: 44px 36px;
+  max-width: 400px;
+  text-align: center;
+  transform: translateY(14px);
+  transition: transform .4s var(--ease);
+}
+.detail-modal.open .detail-modal__box { transform: translateY(0); }
+
+.detail-modal__box .mono {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+.detail-modal__box h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  margin-bottom: 14px;
+  color: var(--paper);
+}
+.detail-modal__box p {
+  color: var(--text-soft);
+  margin-bottom: 26px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.detail-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.detail-modal__close {
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px;
+}
+.detail-modal__close:hover { color: var(--paper); }
+
+@media (max-width: 640px) {
+  .hidden-detail { right: 4px; font-size: 9px; }
+}

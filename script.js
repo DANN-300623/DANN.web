@@ -96,3 +96,37 @@
         });
     });
   }
+
+  /* ---------- SKRIVEN DETALJ (samo paketi.html) ---------- */
+  const hiddenDetailBtn = document.getElementById('hiddenDetail');
+  const detailModal = document.getElementById('detailModal');
+  const closeDetailModalBtn = document.getElementById('closeDetailModal');
+
+  if (hiddenDetailBtn && detailModal) {
+    hiddenDetailBtn.addEventListener('click', function(){
+      detailModal.classList.add('open');
+    });
+    if (closeDetailModalBtn) {
+      closeDetailModalBtn.addEventListener('click', function(){
+        detailModal.classList.remove('open');
+      });
+    }
+    detailModal.addEventListener('click', function(e){
+      if (e.target === detailModal) { detailModal.classList.remove('open'); }
+    });
+    document.addEventListener('keydown', function(e){
+      if (e.key === 'Escape') { detailModal.classList.remove('open'); }
+    });
+  }
+
+  /* ---------- KOD ZA POPUST IZ URL-a (samo kontakt.html) ---------- */
+  const poljePoruka = document.getElementById('poruka');
+  if (poljePoruka) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const kod = urlParams.get('kod');
+    if (kod) {
+      poljePoruka.value = 'Kod za popust: ' + kod + '\n\n';
+      poljePoruka.focus();
+      poljePoruka.setSelectionRange(poljePoruka.value.length, poljePoruka.value.length);
+    }
+  }
