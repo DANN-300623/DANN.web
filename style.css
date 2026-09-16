@@ -10,7 +10,7 @@
   --ease: cubic-bezier(.22,.61,.36,1);
 }
 .red-dot {
-  color: #e63946;
+  color: var(--accent);
   font-weight: 700;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
   }
 
   h1, h2, h3 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
     letter-spacing: -0.01em;
   }
@@ -39,7 +39,7 @@
   }
 
   .mono {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -48,7 +48,7 @@
 
   /* ---------- BRAND / LOGO ---------- */
   .brand {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 600;
     font-size: 19px;
     letter-spacing: 0.5px;
@@ -205,7 +205,7 @@
   .hero-stats > div:last-child { border-right: none; }
 
   .stat-num {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 30px;
     font-weight: 500;
   }
@@ -221,7 +221,16 @@
     margin-bottom: 56px;
     max-width: 560px;
   }
-  .section-head h2 { font-size: 30px; margin-bottom: 12px; }
+  .section-head h2 { font-size: 30px; margin-bottom: 12px; position: relative; padding-left: 22px; }
+  .section-head h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 14px;
+    height: 3px;
+    background: var(--accent);
+  }
   .section-head p { color: var(--text-soft); font-size: 14px; }
 
   /* ---------- PAGE TITLE (podstranice) ---------- */
@@ -252,7 +261,7 @@
 
   .teaser-price {
     margin: 14px 0 10px;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
   }
   .teaser-price .old {
     text-decoration: line-through;
@@ -260,7 +269,7 @@
     font-size: 13px;
     margin-right: 8px;
   }
-  .teaser-price .new { font-size: 20px; font-weight: 500; }
+  .teaser-price .new { font-size: 20px; font-weight: 600; color: var(--accent); }
   .teaser-price .new::before { content: 'od '; font-size: 12px; font-weight: 400; color: var(--text-soft); }
 
   .teaser-features {
@@ -312,7 +321,7 @@
     top: 24px;
     right: -13px;
     color: var(--accent);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
     line-height: 1;
     background: var(--ink);
@@ -343,7 +352,7 @@
   display: flex; align-items: center; justify-content: center;
 }
   .portfolio-visual span {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 22px;
     color: var(--text-soft);
     letter-spacing: 1px;
@@ -411,7 +420,7 @@
   .price-card h3 { font-size: 17px; margin: 10px 0 8px; color: var(--text-soft); font-weight: 400; }
 
   .price-amount {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 34px;
     font-weight: 500;
     margin: 10px 0 14px;
@@ -462,7 +471,7 @@
     text-align: left;
   }
   .addon-row .cena {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-weight: 500;
     white-space: nowrap;
     font-size: 14px;
@@ -501,7 +510,7 @@
   }
 
   .timeline-num {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
     letter-spacing: 1px;
     color: var(--accent);
@@ -532,7 +541,7 @@
     border: 1px solid var(--line-strong);
   }
   .demo-visual span {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 20px;
     letter-spacing: 1px;
   }
@@ -572,7 +581,7 @@
 
   .faq-item summary {
     cursor: pointer;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 15px;
     list-style: none;
     display: flex;
@@ -757,14 +766,14 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
   letter-spacing: 0.5px;
   color: var(--text-soft);
 }
 
 .mobile-menu a.mnav-link {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: clamp(22px, 6.5vw, 30px);
   color: var(--paper);
   display: block;
@@ -863,7 +872,7 @@
   display: block;
 }
 .detail-modal__box h3 {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-size: 24px;
   margin-bottom: 14px;
   color: var(--paper);

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<meta name="robots" content="noindex, follow"> <!-- UKLONI OVU LINIJU kad postavis pravi domen -->
+
+<meta name="description" content="Resursi — vodiči za izbor paketa, online prodavnicu, zakazivanje, kontakt formu i dizajn opcije.">
+
+<link rel="canonical" href="https://dann-web.dann-standard.workers.dev/resursi.html">
+<meta property="og:title" content="Resursi | DANN.web.workshop">
+<meta property="og:description" content="Vodiči i materijali koji Vam pomažu da izaberete pravo rešenje za Vaš sajt.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dann-web.dann-standard.workers.dev/resursi.html">
+
+<title>Resursi | DANN.web.workshop</title>
+<meta name="apple-mobile-web-app-title" content="DANN">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="style.css">
+
+<style>
+  .resursi-hero{padding:64px 0 48px;border-bottom:1px solid var(--line, #2a2b2e);}
+  .resursi-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:22px;
+    padding:48px 0 100px;
+  }
+  .resursi-card{
+    display:block; text-decoration:none; color:inherit;
+    background:var(--surface,#232427); border:1px solid rgba(242,240,235,.1);
+    border-radius:10px; padding:28px 26px; transition:border-color .2s ease, transform .2s ease;
+  }
+  .resursi-card:hover{border-color:var(--accent,#C1361E); transform:translateY(-2px);}
+  .resursi-card .num{font-family:'Space Grotesk',sans-serif; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--accent,#C1361E); margin-bottom:10px; display:block;}
+  .resursi-card h3{font-family:'Space Grotesk',sans-serif; font-size:19px; margin:0 0 10px; color:var(--ink,#F2F0EB);}
+  .resursi-card p{font-size:14px; color:rgba(242,240,235,.65); margin:0; line-height:1.6;}
+  .resursi-card .open{font-size:13px; color:var(--accent,#C1361E); margin-top:14px; display:block;}
+  @media (max-width:780px){ .resursi-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+
+    <a href="index.html" class="brand" style="text-decoration:none;">
+      DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">Početna</a>
+
+      <a href="paketi.html">
+        Paketi i cenovnik
+      </a>
+
+      <a href="primeri.html">Primeri</a>
+
+      <a href="resursi.html" class="active">Resursi</a>
+
+      <a href="kontakt.html" class="btn-nav">
+        Zakažite poziv
+      </a>
+
+      <button class="burger" id="burgerBtn" aria-label="Otvorite meni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="closeMenuBtn" aria-label="Zatvorite meni">ZATVORI ✕</button>
+  <a href="index.html" class="mnav-link">Početna</a>
+  <a href="paketi.html" class="mnav-link">Paketi i cenovnik</a>
+  <a href="primeri.html" class="mnav-link">Primeri</a>
+  <a href="resursi.html" class="mnav-link">Resursi</a>
+  <a href="kontakt.html" class="mobile-menu__book mnav-link">Zakažite poziv</a>
+</div>
+
+
+<section class="resursi-hero">
+  <div class="container">
+    <h1>Resursi</h1>
+    <p style="max-width:60ch; color:rgba(242,240,235,.65); margin-top:12px;">
+      Vodiči i materijali koji Vam pomažu da unapred razumete opcije —
+      pre nego što uopšte razgovaramo. Birajte paket, sistem prodavnice
+      ili zakazivanja sa punom slikom šta dobijate.
+    </p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="resursi-grid">
+
+    <a href="koji-paket-je-za-vas.html" class="resursi-card">
+      <span class="num">01 — Izbor paketa</span>
+      <h3>Koji paket je za Vas?</h3>
+      <p>Poređenje Start, Comfort, Premium, Exclusive i Mini Booking paketa — šta svaki nosi, i kome je namenjen.</p>
+      <span class="open">Otvorite vodič →</span>
+    </a>
+
+    <a href="koji-sistem-odgovara.html" class="resursi-card">
+      <span class="num">02 — Online prodavnica</span>
+      <h3>Koji sistem odgovara Vašem biznisu?</h3>
+      <p>Tri nivoa Webshop rešenja — od jednostavnog do potpuno prilagođenog sistema bez ograničenja.</p>
+      <span class="open">Otvorite vodič →</span>
+    </a>
+
+    <a href="online-zakazivanje-kako-radi.html" class="resursi-card">
+      <span class="num">03 — Online zakazivanje</span>
+      <h3>Online zakazivanje — kako radi</h3>
+      <p>Ceo proces, korak po korak — od zahteva klijenta do potvrde termina, plus realna ograničenja sistema.</p>
+      <span class="open">Otvorite vodič →</span>
+    </a>
+
+    <a href="klijent-kontakt-forma.html" class="resursi-card">
+      <span class="num">04 — Kontakt forma</span>
+      <h3>Kontakt forma — šta treba da znate</h3>
+      <p>Kako radi, i koje su Vaše zakonske obaveze kad prikupljate podatke posetilaca preko sajta.</p>
+      <span class="open">Otvorite vodič →</span>
+    </a>
+
+    <a href="seo-objasnjeno.html" class="resursi-card">
+      <span class="num">05 — SEO</span>
+      <h3>Šta je SEO i kako ga uvodimo?</h3>
+      <p>Tehnička SEO podešavanja koja ugrađujemo pri izradi sajta, objašnjena jednostavno.</p>
+      <span class="open">Otvorite vodič →</span>
+    </a>
+
+    <a href="tipografija-animacije.html" class="resursi-card" style="grid-column:span 2;">
+      <span class="num">06 — Dizajn opcije</span>
+      <h3>Tipografija i animacije</h3>
+      <p>Pregled font kombinacija i animacija koje su dostupne za Vaš sajt — uživo, isprobajte pre nego što odlučite.</p>
+      <span class="open">Otvorite showcase →</span>
+    </a>
+
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <p style="text-align:center; font-size:13px; color:rgba(242,240,235,.5);">
+      DΛNN<span class="dot">.</span>web<span class="dot">.</span>workshop
+    </p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
