@@ -76,22 +76,30 @@
     form.addEventListener('submit', function(e) {
       e.preventDefault();
 
+      // honeypot provera - ako je skriveno polje popunjeno, to je bot,
+      // tiho prekini slanje bez ikakve poruke o grešci
+      const honeypotEl = document.getElementById('website');
+      if (honeypotEl && honeypotEl.value) {
+        return;
+      }
+
       const fd = new FormData();
       fd.append('name', document.getElementById('ime').value);
       fd.append('email', document.getElementById('email').value);
       fd.append('phone', document.getElementById('telefon').value);
       fd.append('projectType', document.getElementById('tip').value);
       fd.append('message', document.getElementById('poruka').value);
+      fd.append('website', honeypotEl ? honeypotEl.value : '');
 
       fetch(SCRIPT_URL, { method: 'POST', body: fd })
         .then(function(){
-          confirmationMsg.textContent = 'Hvala na poruci! Javljam se uskoro na naveden kontakt.';
+          confirmationMsg.textContent = 'Hvala na poruci! Javljamo se uskoro na naveden kontakt.';
           confirmationMsg.style.display = 'block';
           form.reset();
           confirmationMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
         })
         .catch(function(){
-          confirmationMsg.textContent = 'Došlo je do greške — probaj ponovo ili piši direktno na hello@dannweb.rs';
+          confirmationMsg.textContent = 'Došlo je do greške — probajte ponovo ili pišite direktno na dann.web.workshop@gmail.com';
           confirmationMsg.style.display = 'block';
         });
     });
