@@ -57,54 +57,146 @@
   </div>
 </section>
 
+<style>
+  .primeri-grid{
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+  }
+  .primeri-card{
+    background: var(--surface, #fff); border: 1px solid var(--line, #e5e1d8);
+    border-radius: 12px; overflow: hidden;
+  }
+  .primeri-card__img{
+    width: 100%; aspect-ratio: 1200/750; object-fit: cover; object-position: top;
+    display: block; background: #ece7dc;
+  }
+  .primeri-card__img.bez-slike{
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-soft, #888); font-size: 13px; font-family: var(--mono, monospace);
+  }
+  .primeri-card__body{ padding: 26px 28px 28px; }
+  .primeri-card .mono{ font-family: var(--mono, monospace); font-size: 12px; color: var(--accent, #c1361e); letter-spacing: .03em; }
+  .primeri-card h3{ font-size: 22px; margin: 8px 0 10px; }
+  .primeri-card p.opis{ color: var(--text-soft, #666); font-size: 14px; line-height: 1.6; margin-bottom: 16px; }
+  .primeri-card .tag-list{ display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .primeri-card .tag{ font-size: 11.5px; background: var(--bg, #f5f0e8); border: 1px solid var(--line, #e5e1d8); padding: 4px 10px; border-radius: 20px; color: var(--text-soft, #666); }
+  .primeri-card .btn-demo{
+    display: inline-block; padding: 11px 20px; border: 1px solid var(--ink, #1c1c1a);
+    border-radius: 6px; font-size: 13.5px; text-decoration: none; color: var(--ink, #1c1c1a);
+    opacity: .5; cursor: default;
+  }
+  @media (max-width: 800px){ .primeri-grid{ grid-template-columns: 1fr; } }
+</style>
+
 <section class="demo-grid section-surface">
-  <div class="container stagger">
+  <div class="container">
+    <div class="primeri-grid">
 
-    <div class="demo-card reveal">
-      <div class="demo-visual demo-latice"><span>Latice</span></div>
-      <div class="demo-text">
-        <span class="mono">Kozmetički salon · Pastelno, nežno</span>
-        <h3>Latice</h3>
-        <p>Sajt za kozmetički salon sa online zakazivanjem, tabovima za usluge/galeriju/cenovnik, i sistemom koji upisuje termine direktno u kalendar.</p>
-        <div class="tag-list">
-          <span class="tag">Online zakazivanje</span>
-          <span class="tag">Pastelna paleta</span>
-          <span class="tag">Responsive</span>
+      <div class="primeri-card">
+        <img class="primeri-card__img" src="slike-primeri/osmeh.jpg" alt="OSMEH — stomatološka ordinacija">
+        <div class="primeri-card__body">
+          <span class="mono">Stomatološka ordinacija</span>
+          <h3>OSMEH</h3>
+          <p class="opis">Topao, direktan ton za nekog ko izbegava zubara. Pet stranica, kontakt forma koja stvarno šalje mejl.</p>
+          <div class="tag-list">
+            <span class="tag">5 stranica</span>
+            <span class="tag">Kontakt forma</span>
+            <span class="tag">Topla paleta</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
         </div>
-        <a href="kontakt.html" class="btn-secondary">Želim sličan sajt →</a>
       </div>
-    </div>
 
-    <div class="demo-card reveal">
-      <div class="demo-visual demo-stil"><span>Stil</span></div>
-      <div class="demo-text">
-        <span class="mono">Kozmetički salon · Elegantno, zlatno</span>
-        <h3>Stil</h3>
-        <p>Višestranični sajt za elegantniji koncept salona — sa punom fotografijom u hero delu, galerijom i istim sistemom zakazivanja.</p>
-        <div class="tag-list">
-          <span class="tag">Više stranica</span>
-          <span class="tag">Elegantna paleta</span>
-          <span class="tag">Online zakazivanje</span>
+      <div class="primeri-card">
+        <img class="primeri-card__img" src="slike-primeri/stil.jpg" alt="STIL — beauty salon">
+        <div class="primeri-card__body">
+          <span class="mono">Beauty salon</span>
+          <h3>STIL</h3>
+          <p class="opis">Najkompleksniji od svih — deset stranica, online zakazivanje sa izborom usluge, datuma i termina.</p>
+          <div class="tag-list">
+            <span class="tag">10 stranica</span>
+            <span class="tag">Online zakazivanje</span>
+            <span class="tag">Elegantna paleta</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
         </div>
-        <a href="kontakt.html" class="btn-secondary">Želim sličan sajt →</a>
       </div>
-    </div>
 
-    <div class="demo-card reveal">
-      <div class="demo-visual demo-sapica"><span>Šapica</span></div>
-      <div class="demo-text">
-        <span class="mono">Pet shop · Igrivo, veselo</span>
-        <h3>Šapica</h3>
-        <p>Sajt za lokalnu prodavnicu kućnih ljubimaca — jednostavna struktura, pregled proizvoda i kontakt informacije.</p>
-        <div class="tag-list">
-          <span class="tag">Landing page</span>
-          <span class="tag">Igriva paleta</span>
-          <span class="tag">Brzo i jednostavno</span>
+      <div class="primeri-card">
+        <img class="primeri-card__img" src="slike-primeri/amara.jpg" alt="AMARA — online prodavnica">
+        <div class="primeri-card__body">
+          <span class="mono">Online prodavnica</span>
+          <h3>AMARA</h3>
+          <p class="opis">Prava webshop struktura — korpa, checkout, i admin panel za upravljanje proizvodima i porudžbinama.</p>
+          <div class="tag-list">
+            <span class="tag">Korpa i checkout</span>
+            <span class="tag">Admin panel</span>
+            <span class="tag">10 proizvoda</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
         </div>
-        <a href="kontakt.html" class="btn-secondary">Želim sličan sajt →</a>
       </div>
-    </div>
 
+      <div class="primeri-card">
+        <img class="primeri-card__img bez-slike" src="slike-primeri/atelier.jpg" alt="ATELIER — beauty studio">
+        <div class="primeri-card__body">
+          <span class="mono">Beauty studio</span>
+          <h3>ATELIER</h3>
+          <p class="opis">Tih, minimalistički ton za mali beauty studio. Online zakazivanje, jednostavna, uređena struktura.</p>
+          <div class="tag-list">
+            <span class="tag">Online zakazivanje</span>
+            <span class="tag">Minimalizam</span>
+            <span class="tag">Jedna stranica</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
+        </div>
+      </div>
+
+      <div class="primeri-card">
+        <img class="primeri-card__img bez-slike" src="slike-primeri/form.jpg" alt="FORM — muški frizerski studio">
+        <div class="primeri-card__body">
+          <span class="mono">Muški frizerski studio</span>
+          <h3>FORM</h3>
+          <p class="opis">Krupna, samouverena tipografija za barber studio. Online zakazivanje termina, jasna struktura usluga.</p>
+          <div class="tag-list">
+            <span class="tag">Online zakazivanje</span>
+            <span class="tag">Krupna tipografija</span>
+            <span class="tag">Jedna stranica</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
+        </div>
+      </div>
+
+      <div class="primeri-card">
+        <img class="primeri-card__img" src="slike-primeri/pogon.jpg" alt="POGON — auto servis">
+        <div class="primeri-card__body">
+          <span class="mono">Auto servis</span>
+          <h3>POGON</h3>
+          <p class="opis">Iskren, "bez uvijanja" ton — "Popravljamo ono što je pokvareno. Ne izmišljamo ono što nije."</p>
+          <div class="tag-list">
+            <span class="tag">Kontakt forma</span>
+            <span class="tag">Tamna paleta</span>
+            <span class="tag">Jedna stranica</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
+        </div>
+      </div>
+
+      <div class="primeri-card">
+        <img class="primeri-card__img" src="slike-primeri/repibrk.jpg" alt="Rep i Brk — prodavnica za ljubimce">
+        <div class="primeri-card__body">
+          <span class="mono">Prodavnica za ljubimce</span>
+          <h3>Rep i Brk</h3>
+          <p class="opis">Igriv, topao ton sa ilustrovanim maskotom — "ovde znamo imena mušterija, i po koje ime njihovog psa."</p>
+          <div class="tag-list">
+            <span class="tag">Kontakt forma</span>
+            <span class="tag">Ilustracija</span>
+            <span class="tag">Jedna stranica</span>
+          </div>
+          <a href="#" class="btn-demo">Otvorite demo →</a>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
